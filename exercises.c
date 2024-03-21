@@ -48,10 +48,8 @@ List *crea_lista()
   {
     int *valor = malloc(sizeof(int));
     *valor = i;
-    push(Lista, valor);
+    pushBack(Lista, valor);
   }
-  
-  
   return Lista;
 }
 
