@@ -115,7 +115,12 @@ int parentesisBalanceados(char *cadena) {
   if(size % 2 != 0)
     return 0;
   while(i < size/2){
-    int k = size - i - 1;
+    int k = size - i - 1; //k seria el final de la cadena, el -1 seria para sacar el backslash 0
+    if(cadena[i]+1 == cadena[k] || cadena[i]+2 == cadena[k])
+      ++i;
+    else 
+      return 0;
   }
+  return 1;
 }
 
