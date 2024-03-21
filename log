@@ -44,3 +44,21 @@ Thu 21 Mar 2024 08:09:49 PM UTC:
  tests:  0|5
 total_score: 0/70
 8d758f1
+Thu 21 Mar 2024 08:10:16 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:51:17: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+   51 |     push(Lista, *valor);
+      |                 ^~~~~~
+      |                 |
+      |                 int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a4f32d2
