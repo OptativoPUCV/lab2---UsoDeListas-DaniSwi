@@ -41,11 +41,9 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List *crea_lista() 
-{
+List *crea_lista() {
   List *Lista = create_list();
-  for(int i=1;i<=10;++i)
-  {
+  for(int i=1;i<=10;++i) {
     int *valor = malloc(sizeof(int));
     *valor = i;
     pushBack(Lista, valor);
@@ -59,7 +57,12 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   return 0;
+  void *elemento = first(L);
+  int suma = 0;
+  while(elemento != NULL){
+    suma += (int *)elemento;
+  }
+  return suma;
 }
 
 /*
