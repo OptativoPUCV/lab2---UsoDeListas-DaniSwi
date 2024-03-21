@@ -62,3 +62,13 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 a4f32d2
+Thu 21 Mar 2024 08:10:23 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:51:10: error: invalid use of incomplete typedef ‘List’
+   51 |     push(*Lista, valor);
+      |          ^~~~~~
+Compilation failed
+aa6ae86
