@@ -125,3 +125,13 @@ Thu 21 Mar 2024 08:24:37 PM UTC:
  tests:  3|2
 total_score: 40/70
 4f52d8e
+Thu 21 Mar 2024 08:29:23 PM UTC: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:15: error: array subscript is not an integer
+  104 |     dato = pop[aux];
+      |               ^
+Compilation failed
+a6c91b2
