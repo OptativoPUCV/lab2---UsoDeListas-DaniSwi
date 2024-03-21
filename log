@@ -19,3 +19,22 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 70f5dd8
+Thu 21 Mar 2024 08:09:27 PM UTC: 
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:17: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   47 |     int valor = malloc(sizeof(int));
+      |                 ^~~~~~
+exercises.c:49:17: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+   49 |     push(Lista, valor);
+      |                 ^~~~~
+      |                 |
+      |                 int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ec94e46
